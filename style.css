@@ -1,74 +1,104 @@
-body {
-    background: #fff7ec;
-    font-family: 'Segoe UI', sans-serif;
-    color: #444;
+/* General Reset */
+* {
+    box-sizing: border-box;
     margin: 0;
-    padding: 20px;
+    padding: 0;
+  }
+  
+  /* Body Styling */
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fff7ec;
+    color: #333;
+    padding: 2rem;
+  }
+  
+  /* App Container */
+  .app {
+    max-width: 800px;
+    margin: auto;
     text-align: center;
   }
   
+  /* Header */
   h1 {
-    color: #a26f6f;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #4b8d5c;
+    font-weight: 600;
   }
   
-  .plant-card {
-    background: #fff;
-    border-radius: 20px;
-    padding: 20px;
-    width: 250px;
-    margin: 20px auto;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  }
-  
-  .plant-card img {
-    width: 120px;
-    height: auto;
-  }
-  
-  button {
-    padding: 10px 20px;
-    background: #aee6b1;
-    border: none;
-    border-radius: 10px;
-    font-weight: bold;
-    cursor: pointer;
-  }
-
+  /* Plant Container Grid */
   .plant-container {
     display: flex;
-    gap: 2rem; /* space between cards */
-    justify-content: center; /* center them horizontally */
-    flex-wrap: wrap; /* allow to wrap on smaller screens */
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
   }
   
+  /* Plant Card Styling */
   .plant-card {
-    border: 1px solid #ddd;
-    border-radius: 12px;
+    background: #ffffff;
+    border: 2px dashed #cfe8d8;
+    border-radius: 20px;
     padding: 1rem;
-    width: 200px;
-    text-align: center;
-    background: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  }
-
-  .plant-name {
-    outline: none;
-    border-bottom: 1px dashed #ccc;
-    display: inline-block;
-    padding: 2px;
-    cursor: text;
+    width: 240px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
   }
   
-  .add-plant-btn {
-    margin: 1rem auto;
-    display: block;
-    padding: 0.6rem 1.2rem;
+  .plant-card:hover {
+    transform: scale(1.02);
+  }
+  
+  /* Plant Images */
+  .plant-card img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+  
+  /* Buttons */
+  button {
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
     font-size: 1rem;
-    border-radius: 8px;
-    border: none;
-    background: #77dd77;
+    background: #6db57d;
     color: white;
+    border: none;
+    border-radius: 10px;
     cursor: pointer;
+    transition: background 0.3s ease;
   }
   
+  button:hover {
+    background: #589b6a;
+  }
+  
+  /* Last Watered Info */
+  .status {
+    font-size: 1.5rem;
+    margin-left: 0.5rem;
+  }
+  
+  /* Mood Notes */
+  .mood-note {
+    margin-top: 1rem;
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px dashed #b7d9c6;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    resize: none;
+    background-color: #f9fefc;
+  }
+  
+  /* Whisper Box */
+  .plant-whisper {
+    margin-top: 0.5rem;
+    font-style: italic;
+    color: #7eaf8b;
+    font-size: 0.85rem;
+    min-height: 1rem;
+  }
   

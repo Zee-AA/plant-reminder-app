@@ -5,8 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Plant Reminder</title>
   <link rel="manifest" href="manifest.json" />
-<meta name="theme-color" content="#6db57d" />
-
+  <meta name="theme-color" content="#6db57d" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -14,47 +13,53 @@
     <h1>🌿 My Plant Reminder</h1>
 
     <div class="plant-container">
-        <div class="plant-card">
-          <img src="images/plant_1.png" alt="Plant 1" />
-          <h2>Plant 1</h2>
-          <p>
-            Last watered: <span id="last-watered">Not yet</span>
-            <span id="status-1" class="status">🥺</span>
-          </p>
-          <button onclick="waterPlant(1)">💧 Water</button>
-        </div>
-      
-        <div class="plant-card">
-          <img src="images/plant_2.png" alt="Plant 2" />
-          <h2>Plant 2</h2>
-          <p>
-            Last watered: <span id="last-watered-2">Not yet</span>
-            <span id="status-2" class="status">🥺</span>
-          </p>
-          <button onclick="waterPlant(2)">💧 Water</button>
-        </div>
-    
-        <div class="plant-card">
-            <img src="images/plant_3.png" alt="Plant 3" />
-            <h2>Plant 3</h2>
-            <p>
-              Last watered: <span id="last-watered-3">Not yet</span>
-              <span id="status-3" class="status">🥺</span>
-            </p>
-            <button onclick="waterPlant(3)">💧 Water</button>
-          </div>
+      <!-- Plant 1 -->
+      <div class="plant-card">
+        <img src="images/plant_1.png" alt="Plant 1" />
+        <h2>fern</h2>
+        <p>
+          Last watered: <span id="last-watered">Not yet</span>
+          <span id="status-1" class="status">🥺</span>
+        </p>
+        <button onclick="waterPlant(1)">💧 Water</button>
+        <textarea class="mood-note" placeholder="🌱 How's your plant feeling?"></textarea>
+        <div class="plant-whisper" id="whisper-1"></div>
       </div>
-      
 
+      <!-- Plant 2 -->
+      <div class="plant-card">
+        <img src="images/plant_2.png" alt="Plant 2" />
+        <h2>fleur</h2>
+        <p>
+          Last watered: <span id="last-watered-2">Not yet</span>
+          <span id="status-2" class="status">🥺</span>
+        </p>
+        <button onclick="waterPlant(2)">💧 Water</button>
+        <textarea class="mood-note" placeholder="🌱 How's your plant feeling?"></textarea>
+        <div class="plant-whisper" id="whisper-2"></div>
+      </div>
+
+      <!-- Plant 3 -->
+      <div class="plant-card">
+        <img src="images/plant_3.png" alt="Plant 3" />
+        <h2>ruta</h2>
+        <p>
+          Last watered: <span id="last-watered-3">Not yet</span>
+          <span id="status-3" class="status">🥺</span>
+        </p>
+        <button onclick="waterPlant(3)">💧 Water</button>
+        <textarea class="mood-note" placeholder="🌱 How's your plant feeling?"></textarea>
+        <div class="plant-whisper" id="whisper-3"></div>
+      </div>
     </div>
-      
-      
   </div>
- 
-  <script src="script.js">
+
+  <script src="script.js"></script>
+  <script>
+    // Register service worker
     if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('service-worker.js');
-}
+      navigator.serviceWorker.register('service-worker.js');
+    }
   </script>
 </body>
 </html>

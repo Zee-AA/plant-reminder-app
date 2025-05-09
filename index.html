@@ -13,39 +13,33 @@
     <h1>🌿 My Plant Reminder</h1>
 
     <div class="plant-container">
-      <!-- Plant 1 -->
       <div class="plant-card">
-        <img src="images/plant_1.png" alt="Plant 1" />
-        <h2>fern</h2>
+        <img id="plant-img-1" src="images/plant_1_happy.png" alt="Plant 1" />
+        <h2>Plant 1</h2>
         <p>
           Last watered: <span id="last-watered">Not yet</span>
-          <span id="status-1" class="status">🥺</span>
         </p>
         <button onclick="waterPlant(1)">💧 Water</button>
         <textarea class="mood-note" placeholder="🌱 How's your plant feeling?"></textarea>
         <div class="plant-whisper" id="whisper-1"></div>
       </div>
 
-      <!-- Plant 2 -->
       <div class="plant-card">
-        <img src="images/plant_2.png" alt="Plant 2" />
-        <h2>fleur</h2>
+        <img id="plant-img-2" src="images/plant_2_happy.png" alt="Plant 2" />
+        <h2>Plant 2</h2>
         <p>
           Last watered: <span id="last-watered-2">Not yet</span>
-          <span id="status-2" class="status">🥺</span>
         </p>
         <button onclick="waterPlant(2)">💧 Water</button>
         <textarea class="mood-note" placeholder="🌱 How's your plant feeling?"></textarea>
         <div class="plant-whisper" id="whisper-2"></div>
       </div>
 
-      <!-- Plant 3 -->
       <div class="plant-card">
-        <img src="images/plant_3.png" alt="Plant 3" />
-        <h2>ruta</h2>
+        <img id="plant-img-3" src="images/plant_3_happy.png" alt="Plant 3" />
+        <h2>Plant 3</h2>
         <p>
           Last watered: <span id="last-watered-3">Not yet</span>
-          <span id="status-3" class="status">🥺</span>
         </p>
         <button onclick="waterPlant(3)">💧 Water</button>
         <textarea class="mood-note" placeholder="🌱 How's your plant feeling?"></textarea>
@@ -54,9 +48,12 @@
     </div>
   </div>
 
+  <!-- Sound effects -->
+  <audio id="happy-sound" src="sounds/happy.mp3" preload="auto"></audio>
+  <audio id="sad-sound" src="sounds/sad.mp3" preload="auto"></audio>
+
   <script src="script.js"></script>
   <script>
-    // Register service worker
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('service-worker.js');
     }

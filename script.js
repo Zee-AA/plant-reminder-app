@@ -11,46 +11,23 @@ function waterPlant(plantNum) {
       const lastStr = localStorage.getItem(`plant${i}-watered`);
       const last = new Date(lastStr);
       const wateredEl = document.getElementById(`last-watered${i === 1 ? '' : '-' + i}`);
-      const statusEl = document.getElementById(`status-${i}`);
+      const plantImg = document.getElementById(`plant-img-${i}`);
   
       if (!isNaN(last)) {
         const hoursSince = (now - last) / (1000 * 60 * 60);
         wateredEl.textContent = last.toLocaleString();
-        statusEl.textContent = hoursSince < 1 ? '😊' : '🥺';
+  
+        if (hoursSince < 2) {
+          plantImg.src = `images/plant_${i}_happy.png`;
+        } else {
+          plantImg.src = `images/plant_${i}_sad.png`;
+        }
       } else {
         wateredEl.textContent = 'Not yet';
-        statusEl.textContent = '🥺';
+        plantImg.src = `images/plant_${i}_sad.png`;
       }
     }
   }
   
-  function setupMoodNotes() {
-    for (let i = 1; i <= 3; i++) {
-      const textarea = document.querySelectorAll('.mood-note')[i - 1];
-      const whisper = document.getElementById(`whisper-${i}`);
-      const key = `plant${i}-mood`;
-  
-      // Load saved mood
-      const savedMood = localStorage.getItem(key);
-      if (savedMood) {
-        whisper.textContent = `“${savedMood}”`;
-        whisper.style.display = 'block';
-      }
-  
-      // Save mood on blur (when user clicks away)
-      textarea.addEventListener('blur', () => {
-        const mood = textarea.value.trim();
-        if (mood) {
-          localStorage.setItem(key, mood);
-          whisper.textContent = `“${mood}”`;
-          whisper.style.display = 'block';
-          textarea.value = '';
-        }
-      });
-    }
-  }
-  
-  // Run on load
   updateStatus();
-  setupMoodNotes();
   

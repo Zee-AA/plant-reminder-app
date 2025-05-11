@@ -101,4 +101,41 @@
     font-size: 0.85rem;
     min-height: 1rem;
   }
-  
+  /* Achievements section */
+.achievements {
+  margin-top: 2rem;
+  background-color: #f6fdf8;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  font-family: 'Comic Neue', cursive;
+}
+
+.achievements h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #2e7d55;
+}
+
+.badges {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.badge {
+  background-color: #dff7ea;
+  border: 2px dashed #6db57d;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+  color: #3e6f56;
+  transition: transform 0.3s ease;
+}
+
+.badge:hover {
+  transform: scale(1.1);
+  background-color: #c6f5dd;
+}

@@ -1,4 +1,6 @@
 🌿 My Plant Reminder App
+
+
 Welcome to My Plant Reminder, a gentle, aesthetic web app that helps you care for your virtual houseplants and build better habits — one water drop at a time.
 
 ✨ Features
